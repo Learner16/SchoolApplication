@@ -1,0 +1,37 @@
+@import 'common';
+
+#circulars{
+     [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+    [data-role="content"]{
+        div{
+            &.ui-grid-a{
+                .ui-block-a{
+                    color: $primaryColorRed;
+                    font-weight: bold;
+                    width: 40%;
+                    span{
+                        float: right;
+                    }
+                }
+                margin-bottom: 10px;
+            }
+            .newField{
+                padding: 10px 0px;
+                border-bottom: 1px solid $primaryColorGray;
+                margin: 10px 0px;
+                 img{
+                     width: 100%;
+                }
+                span{
+                    color: $primaryColorRed;
+                }
+            }
+           
+        }
+    }
+}

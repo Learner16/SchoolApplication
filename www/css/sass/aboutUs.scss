@@ -1,0 +1,10 @@
+@import 'common';
+
+#aboutUs{
+     [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+}

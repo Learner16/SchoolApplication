@@ -1,0 +1,41 @@
+@import 'common';
+
+[data-role="panel"]{
+       @include panel;
+    }
+
+[data-role="page"]{
+       position: absolute !important;
+    }
+
+#home{
+    [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+    [data-role="content"]{
+        #homeContentPage-placeholder{
+            div{
+                div{
+                    display: inline-block;
+                    width: 22%;
+                    margin:20px 40px;
+                    a{
+                        text-decoration: none;
+                        img{
+                        
+                            height: 100px;
+                            display: block;
+                            border: 3px solid $primaryColorGray;
+                        }
+                        span{
+                            color: $primaryColorRed;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

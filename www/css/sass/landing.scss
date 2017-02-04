@@ -1,0 +1,37 @@
+
+@import 'common';
+#landing{
+
+         table{
+            border-collapse: collapse;
+            margin: 0px auto;
+            color: $primaryColorRed;
+            width: 100%;
+            height: 150px;
+            margin: 150px 0px;
+            td{
+                
+                padding: 20px;
+                position: relative;
+                background-image: url("../images/avatar.png");
+                span{
+                    position:absolute;
+                    bottom: 0px;
+                }
+                &.selected{
+                    border: 2px solid $primaryColorGray;
+                }
+            }
+            
+        }
+    
+    .newField{
+        button{
+            @include buttonStyle;
+           a{ 
+                @include anchorLink;
+           }
+            
+        }
+    }
+}

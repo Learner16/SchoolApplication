@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>School App</title>
+        <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="lib/jquery/jquery.mobile-1.4.2.min.css">
+        <style>
+        /*Overriding JQuery Mobile css a bit as per requirements*/
+        .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+            background-color: #fff;
+        }
+        .ui-panel-inner {
+            padding: 0px;
+        }
+        </style>
+       
+    </head>
+    <body>
+        <div id="mainContent">
+            
+            <div data-role="page" id="login">
+                <div>
+                    <script id="loginPage-template" type="text/x-handlebars-template">
+                        {{#loginFormElement}}
+                        <div class="newField">
+                            <label for="{{formElement}}">{{label}}</label>
+                             <br/>
+                            <input type="{{dataType}}" data-role="none" id="{{formElement}}"></input>
+                            <div class="hideError"> {{error}} </div>
+                        </div>
+                        {{/loginFormElement}}
+                    </script>
+                     <div class="newField">
+                        <h2>LOGIN</h2>
+                    </div>
+                    <div id="loginPage-placeholder"></div>
+                    <div class="newField" id="actionGo">
+                        <button id="goButton"><a href="#">Go</a></button>
+                        
+                        <br/>
+                        <span id="forgotPasswordLink" ><a href="#forgotPassword">Forgot your password</a></span>
+                    </div>
+                </div>
+            </div>
+            <div data-role="page" id="forgotPassword">
+                <div class="newField">
+                    <h2>Password Setup</h2>
+                </div>
+                <script id="forgotPasswordPage-template" type="text/x-handlebars-template">
+                        {{#forgotPasswordFormElement}}
+                        <div class="newField">
+                            <label for="{{formElement}}">{{label}}</label>
+                             <br/>
+                            <input type="{{dataType}}" data-role="none" id="{{formElement}}"></input>
+                            <div class="hideError">{{errorBlank}}</div>
+                        </div>
+                        {{/forgotPasswordFormElement}}
+                </script>
+                <div id="forgotPasswordPage-placeholder"></div>
+                <div class="newField" id="actionReset">
+                     <button>Reset Password</button>
+                </div>
+            </div>
+            <div data-role="page" id="landing">
+                <table>
+                        <tr>
+                            <td>
+                                <span>Child Name</span>
+                            </td>
+                            <td> 
+                                <span>Child Name</span>
+                            </td>
+                        </tr>
+                        
+                    </table> 
+                <div class="newField" >
+                     <button id="nextHome"><a href="#">Next</a></button>
+                </div>
+            </div>
+            <div data-role="page" id="home">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Home</span>
+                    </div>
+                </div>
+                <div data-role="content">
+                    
+                    <script id="homePageContent-template" type="text/x-handlebars-template">
+                    <div>
+                         {{#activites}}
+                            {{#if imageUrl}}
+                                <div><a href="{{activityRedirect}}">
+                                    <img src="" alt=""/>
+                                    <span>{{activity}}</span>
+                                    </a>
+                                </div>
+                            {{else}}
+                            
+                            {{/if}}
+                        {{/activites}}
+                    </div>
+                    </script>
+                    <div id="homeContentPage-placeholder">
+                       
+                        
+                    </div>
+                </div>
+            </div>
+            <div data-role="page" id="events">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Events</span>
+                    </div>
+                </div>    
+                <div data-role="content">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <span>Events Date</span>
+                        </div>
+                        <div class="ui-block-b">
+                            <select data-role="none" name="" id="">
+                                <option value="lastWeek">Last Week</option>
+                                <option value="lastWeek">Last Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="newField">
+                            <img src="../images/playground.jpg" alt="">
+                        </div>
+                        <div class="newField">
+                            <span>
+                                Annual sports day was held on saturday 17 Feb 
+                            </span>
+                        </div>
+                        <div class="newField">
+                             <span>
+                                 Exams will start from 21st Dec
+                            </span> 
+                            <img src="../images/playground.jpg" alt="">
+                        </div>
+                        <div class="newField">
+                            <span>
+                                 Arts exhibition was held on 15th Dec
+                            </span>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="page" id="circulars">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Circulars</span>
+                    </div>
+                </div>
+                <div data-role="content">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <span>Events Date</span>
+                        </div>
+                        <div class="ui-block-b">
+                            <select data-role="none" name="" id="">
+                                <option value="lastWeek">Last Week</option>
+                                <option value="lastWeek">Last Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="newField">
+                            <img src="../images/playground.jpg" alt="">
+                        </div>
+                        <div class="newField">
+                            <span>
+                                Annual sports day was held on saturday 17 Feb 
+                            </span>
+                        </div>
+                        <div class="newField">
+                             <span>
+                                 Exams will start from 21st Dec
+                            </span> 
+                            <img src="../images/playground.jpg" alt="">
+                        </div>
+                        <div class="newField">
+                            <span>
+                                 Arts exhibition was held on 15th Dec
+                            </span>   
+                        </div>
+                    </div>
+                </div>    
+
+            </div>
+            <div data-role="page" id="details">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Details</span>
+                    </div>
+                </div>   
+                <div data-role="content">
+                    <script id="details-template" type="text/x-handlebars-template">
+                    {{#fields}}
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <label for="{{label}}"> Event {{label}} :</label>
+                            </div>
+                            {{#if url}}   
+                                <img src="{{url}}" alt="">
+                            {{else}}
+                                <div class="ui-block-b">
+                                    <span data-role="none" id="{{label}}">{{description}}</span>
+                                </div>
+                            {{/if}}
+                        </div>
+                        {{/fields}}
+                    </script>
+                    <div id="details-placeholder"></div>
+                </div>          
+            </div>
+            <div data-role="page" id="examSchedule">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Exam Schedule</span>
+                    </div>
+                </div>    
+
+            </div>
+            <div data-role="page" id="timeTable">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Time Table</span>
+                    </div>
+                </div>    
+
+            </div>
+            <div data-role="page" id="syllabus">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Syllabus</span>
+                    </div>
+                </div>    
+
+            </div>
+            <div data-role="page" id="subjectDetails">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Subject Details</span>
+                    </div>
+                </div>    
+            </div>
+            <div data-role="page" id="viewAttendance">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>View Attendance</span>
+                    </div>
+                </div>    
+
+            </div>
+            <div data-role="page" id="feesInformation">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>Fees Information</span>
+                    </div>
+                </div>    
+                <div data-role="content">
+                    <script id="feesInformation-template" type="text/x-handlebars-template">
+                        {{#fields}}
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <label for="{{label}}"> {{label}}</label>
+                            </div>
+                            <div class="ui-block-b">
+                                <input type="text" data-role="none" id="{{label}}"></input>
+                            </div>
+                        </div>
+                        {{/fields}}
+                    </script>
+                    <div id="feesInformation-placeholder" class="feesInformation-placeholder"></div>
+                    <button id="feesDetails"><a href="#">Fees Details</a></button>
+                    <table>
+                        <tr>
+                            <td>Total fees to be paid</td>
+                            <td>10000</td>
+                        </tr>
+                        <tr>
+                            <td>Fees paid till date</td>
+                            <td>10000</td>
+                        </tr>
+                    </table> 
+                </div>
+            </div>
+            <div data-role="page" id="aboutUs">
+                <div data-role="header" data-position="fixed">
+                    <div>
+                        <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
+                        <span>About Us</span>
+                    </div>
+                </div>    
+            </div>
+            <div data-role="panel" id="menuPanel">
+                    <div data-role="header">
+                        <img src="images/avatar.png" alt=""/>
+                        <span id="loginEmailId">james@gmail.com</span>
+                    </div>
+                    <script id="homePage-template" type="text/x-handlebars-template">
+                    <ul>
+                        {{#activites}}
+                        <li><i class="{{icon}}" aria-hidden="true"></i><a href="{{activityRedirect}}">{{activity}}</a></li>
+                        {{/activites}}
+                    </ul>
+                    
+                    </script>
+                    <div id="homePage-placeholder" class="homePage-placeholder"></div>
+                    
+            </div>
+        </div> 
+        <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+        <script src="lib/jquery/jquery-1.10.2.min.js"></script>
+        <script src="lib/jquery/jquery.mobile-1.4.2.min.js"></script>
+         <script>
+            $(function() {
+                $('#menuPanel').enhanceWithin().panel();
+            });
+        </script>
+        <script src="lib/handlebars-v4.0.5.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/landing.js"></script>
+        <script type="text/javascript" src="js/details.js"></script>
+        <script type="text/javascript" src="js/forgotPassword.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+        <script type="text/javascript" src="js/feesInformation.js"></script>
+         <script type="text/javascript" src="js/events.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>

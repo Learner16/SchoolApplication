@@ -1,0 +1,18 @@
+{
+    "users":[{
+            "name":"john",
+            "password":"john",
+            "schoolCode":"abc"
+        },
+        {
+            "name":"james",
+            "password":"james",
+            "schoolCode":"123"
+        },
+        {
+            "name":"katty",
+            "password":"katty",
+            "schoolCode":"def"
+        }
+    ]
+}

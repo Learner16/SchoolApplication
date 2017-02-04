@@ -1,0 +1,10 @@
+@import 'common';
+
+#timeTable{
+     [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+}

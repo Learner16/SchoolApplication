@@ -1,0 +1,10 @@
+@import 'common';
+
+#subjectDetails{
+     [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+}

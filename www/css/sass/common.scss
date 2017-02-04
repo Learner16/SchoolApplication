@@ -1,0 +1,96 @@
+//-------------------------------------------Variables
+$leftMargin: 30px;
+$primaryColorRed: #ed2553;
+$primaryColorWhite: #ffffff;
+$primaryColorLightGray: #ccc;
+$primaryColorGray: #696969;
+
+//-------------------------------------------Mixins
+@mixin headerTextColor {
+  color: $primaryColorRed;
+}
+
+@mixin anchorLink{
+    color: $primaryColorRed;
+    text-decoration: none;
+}
+@mixin textFieldStyle{
+    border:none;
+    border-bottom : 2px solid $primaryColorLightGray;
+    width:90%;
+}
+
+@mixin errorMessage{
+    margin-top: 10px;
+    font-size: 12px;
+    color: $primaryColorRed;
+    &.hideError{
+        display: none;
+    }
+}
+
+@mixin buttonStyle{
+    border: 1px solid $primaryColorRed;
+    border-radius: 5px;
+    background: none;
+    color: $primaryColorRed;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+@mixin pageHeader{
+        background: $primaryColorRed;
+        color: $primaryColorWhite;
+        height: 60px;
+        div{
+            margin-top: 15px;
+        }
+        a{
+            background: $primaryColorRed;
+            color: $primaryColorWhite;
+            border: none;
+            box-shadow: none;
+            margin-left: 10px;
+            //   float:left;
+        }
+        
+        span{
+            text-align: center;
+        }
+}
+
+@mixin panel{
+     [data-role="header"]{
+            background: $primaryColorRed;
+            height: 200px;
+            img{
+                    
+                    height: 125px;
+                    position: absolute;
+                    top: 25px;
+                    left: 25px;
+            }
+            span{
+                    color: $primaryColorWhite;
+                    font-weight: normal;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 40px;
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 15px;
+               
+                a{
+                    @include anchorLink;
+                }
+                i.fa{
+                    width: 25px;
+                    color: $primaryColorGray;
+                }
+            }
+        }
+}

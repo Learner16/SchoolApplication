@@ -1,0 +1,29 @@
+@import 'common';
+
+#details{
+     [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+    [data-role="content"]{
+        #details-placeholder{
+            .ui-grid-a{
+                margin-bottom: 20px;
+                .ui-block-a{
+                    label{
+                        color: $primaryColorRed;
+                        font-weight: bold;
+                    }
+                }
+                .ui-block-b{
+                    color: $primaryColorGray;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

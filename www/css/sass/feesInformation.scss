@@ -1,0 +1,43 @@
+@import 'common';
+
+#feesInformation{
+     [data-role="panel"]{
+       @include panel;
+    }
+    [data-role="header"]{
+        @include pageHeader;
+    }
+    [data-role="content"]{
+        #feesInformation-placeholder{
+            .ui-grid-a{
+                margin-bottom: 30px;
+                .ui-block-a{
+                    
+                    label{
+                        color: $primaryColorRed;
+                    }
+                }
+                .ui-block-b{
+                    input[type="text"]{
+                        @include textFieldStyle;
+                    }
+                }
+            }
+        }
+        button{
+            @include buttonStyle;
+              a{ 
+                @include anchorLink;
+            }
+        }
+        table{
+            border-collapse: collapse;
+            margin: 0px auto;
+            color: $primaryColorRed;
+            td{
+                border:1px solid $primaryColorGray;
+                padding:20px;
+            }
+        }
+    }
+}
