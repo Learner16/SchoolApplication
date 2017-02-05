@@ -14,10 +14,15 @@
                     color: $primaryColorRed;
                     font-weight: bold;
                     width: 40%;
-                    span{
+                    label{
                         float: right;
                     }
                 }
+                // .ui-block-b{
+                //     select{
+                //         @include selectStyle;
+                //     }
+                // }
                 margin-bottom: 10px;
             }
             .newField{

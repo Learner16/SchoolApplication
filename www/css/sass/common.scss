@@ -28,6 +28,13 @@ $primaryColorGray: #696969;
         display: none;
     }
 }
+@mixin selectStyle{
+    border: 1px solid $primaryColorLightGray;
+    width: 150px;
+    background: none;
+    border-radius: 0px;
+    padding: 4px;
+}
 
 @mixin buttonStyle{
     border: 1px solid $primaryColorRed;

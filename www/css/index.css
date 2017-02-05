@@ -219,7 +219,7 @@
     color: #ed2553;
     font-weight: bold;
     width: 40%; }
-    #events [data-role="content"] div.ui-grid-a .ui-block-a span {
+    #events [data-role="content"] div.ui-grid-a .ui-block-a label {
       float: right; }
 #events [data-role="content"] div .newField {
   padding: 10px 0px;
@@ -371,6 +371,20 @@
     margin-left: 10px; }
   #examSchedule [data-role="header"] span {
     text-align: center; }
+#examSchedule [data-role="content"] #examSchedule-placeholder .ui-grid-a {
+  margin-bottom: 30px; }
+  #examSchedule [data-role="content"] #examSchedule-placeholder .ui-grid-a .ui-block-a label {
+    color: #ed2553; }
+  #examSchedule [data-role="content"] #examSchedule-placeholder .ui-grid-a .ui-block-b input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 90%; }
+  #examSchedule [data-role="content"] #examSchedule-placeholder .ui-grid-a .ui-block-b select {
+    border: 1px solid #ccc;
+    width: 150px;
+    background: none;
+    border-radius: 0px;
+    padding: 4px; }
 
 #timeTable [data-role="panel"] [data-role="header"] {
   background: #ed2553;
@@ -410,6 +424,20 @@
     margin-left: 10px; }
   #timeTable [data-role="header"] span {
     text-align: center; }
+#timeTable [data-role="content"] #timeTable-placeholder .ui-grid-a {
+  margin-bottom: 30px; }
+  #timeTable [data-role="content"] #timeTable-placeholder .ui-grid-a .ui-block-a label {
+    color: #ed2553; }
+  #timeTable [data-role="content"] #timeTable-placeholder .ui-grid-a .ui-block-b input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 90%; }
+  #timeTable [data-role="content"] #timeTable-placeholder .ui-grid-a .ui-block-b select {
+    border: 1px solid #ccc;
+    width: 150px;
+    background: none;
+    border-radius: 0px;
+    padding: 4px; }
 
 #syllabus [data-role="panel"] [data-role="header"] {
   background: #ed2553;
@@ -455,7 +483,7 @@
     color: #ed2553;
     font-weight: bold; }
   #syllabus [data-role="content"] div.ui-grid-a .ui-block-b select {
-    border: 1px solid #696969;
+    border: 1px solid #ccc;
     width: 150px;
     background: none;
     border-radius: 0px;
@@ -552,6 +580,20 @@
     margin-left: 10px; }
   #viewAttendance [data-role="header"] span {
     text-align: center; }
+#viewAttendance [data-role="content"] #viewAttendance-placeholder .ui-grid-a {
+  margin-bottom: 30px; }
+  #viewAttendance [data-role="content"] #viewAttendance-placeholder .ui-grid-a .ui-block-a label {
+    color: #ed2553; }
+  #viewAttendance [data-role="content"] #viewAttendance-placeholder .ui-grid-a .ui-block-b input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 90%; }
+  #viewAttendance [data-role="content"] #viewAttendance-placeholder .ui-grid-a .ui-block-b select {
+    border: 1px solid #ccc;
+    width: 150px;
+    background: none;
+    border-radius: 0px;
+    padding: 4px; }
 
 #aboutUs [data-role="panel"] [data-role="header"] {
   background: #ed2553;
@@ -655,6 +697,12 @@
     border: none;
     border-bottom: 2px solid #ccc;
     width: 90%; }
+  #feesInformation [data-role="content"] #feesInformation-placeholder .ui-grid-a .ui-block-b select {
+    border: 1px solid #ccc;
+    width: 150px;
+    background: none;
+    border-radius: 0px;
+    padding: 4px; }
 #feesInformation [data-role="content"] button {
   border: 1px solid #ed2553;
   border-radius: 5px;

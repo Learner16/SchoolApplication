@@ -7,4 +7,25 @@
     [data-role="header"]{
         @include pageHeader;
     }
+    [data-role="content"]{
+        #examSchedule-placeholder{
+            .ui-grid-a{
+                margin-bottom: 30px;
+                .ui-block-a{
+                    
+                    label{
+                        color: $primaryColorRed;
+                    }
+                }
+                .ui-block-b{
+                    input[type="text"]{
+                        @include textFieldStyle;
+                    }
+                    select{
+                        @include selectStyle;
+                    }
+                }
+            }
+        }
+    }
 }

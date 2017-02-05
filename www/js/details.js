@@ -4,7 +4,7 @@ $(document).ready(function(){
         date: "23rd Dec 2017",
         venue: "Mumbai",
         information: "Sports Annual Event",
-        attachments: "../images/avatar.png"
+        attachments: "../images/playground.jpg"
     };
 
     var source = $('#details-template').html();

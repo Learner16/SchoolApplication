@@ -21,6 +21,9 @@
                     input[type="text"]{
                         @include textFieldStyle;
                     }
+                    select{
+                        @include selectStyle;
+                    }
                 }
             }
         }

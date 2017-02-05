@@ -20,8 +20,7 @@
        
     </head>
     <body>
-        <div id="mainContent">
-            
+        <div id="mainContent">     
             <div data-role="page" id="login">
                 <div>
                     <script id="loginPage-template" type="text/x-handlebars-template">
@@ -121,10 +120,10 @@
                 <div data-role="content">
                     <div class="ui-grid-a">
                         <div class="ui-block-a">
-                            <span>Events Date</span>
+                            <label for="selectEvents">Events Date</label>
                         </div>
                         <div class="ui-block-b">
-                            <select data-role="none" name="" id="">
+                            <select data-role="none" name="" id="selectEvents">
                                 <option value="lastWeek">Last Week</option>
                                 <option value="lastWeek">Last Month</option>
                             </select>
@@ -229,6 +228,30 @@
                         <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
                         <span>Exam Schedule</span>
                     </div>
+                </div>
+                <div data-role="content">
+                    <script id="examSchedule-template" type="text/x-handlebars-template">
+                        {{#fields}}
+                        {{#if examSchedule}}
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <label for="{{label}}"> {{label}}</label>
+                                </div>
+                                <div class="ui-block-b">
+                                    {{#if dropdown}}
+                                    <select data-role="none" name="" id="{{label}}">
+                                        <option value="{{label}}">{{label}}</option>
+                                    </select>
+                                    {{else}}
+                                    <input type="text" data-role="none" id="{{label}}"></input>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{else}}
+                        {{/if}}
+                        {{/fields}}
+                    </script>
+                    <div id="examSchedule-placeholder"></div>
                 </div>    
 
             </div>
@@ -238,8 +261,31 @@
                         <a href="#menuPanel"><i class="fa fa-lg fa-bars" aria-hidden="true"></i></a>
                         <span>Time Table</span>
                     </div>
-                </div>    
-
+                </div> 
+                <div data-role="content">
+                     <script id="timeTable-template" type="text/x-handlebars-template">
+                        {{#fields}}
+                        {{#if timeTable}}
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <label for="{{label}}"> {{label}}</label>
+                                </div>
+                                <div class="ui-block-b">
+                                    {{#if dropdown}}
+                                    <select data-role="none" name="" id="{{label}}">
+                                        <option value="{{label}}">{{label}}</option>
+                                    </select>
+                                    {{else}}
+                                    <input type="text" data-role="none" id="{{label}}"></input>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{else}}
+                        {{/if}}
+                        {{/fields}}
+                    </script>
+                    <div id="timeTable-placeholder"></div>
+                </div>   
             </div>
             <div data-role="page" id="syllabus">
                 <div data-role="header" data-position="fixed">
@@ -305,7 +351,30 @@
                         <span>View Attendance</span>
                     </div>
                 </div>    
-
+                <div data-role="content">
+                    <script id="viewAttendance-template" type="text/x-handlebars-template">
+                        {{#fields}}
+                        {{#if viewAttendance}}
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <label for="{{label}}"> {{label}}</label>
+                                </div>
+                                <div class="ui-block-b">
+                                    {{#if dropdown}}
+                                    <select data-role="none" name="" id="{{label}}">
+                                        <option value="{{label}}">{{label}}</option>
+                                    </select>
+                                    {{else}}
+                                    <input type="text" data-role="none" id="{{label}}"></input>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{else}}
+                        {{/if}}
+                        {{/fields}}
+                    </script>
+                    <div id="viewAttendance-placeholder"></div>
+                </div>
             </div>
             <div data-role="page" id="feesInformation">
                 <div data-role="header" data-position="fixed">
@@ -317,14 +386,22 @@
                 <div data-role="content">
                     <script id="feesInformation-template" type="text/x-handlebars-template">
                         {{#fields}}
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <label for="{{label}}"> {{label}}</label>
+                        {{#if feesInformation}}
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <label for="{{label}}"> {{label}}</label>
+                                </div>
+                                <div class="ui-block-b">
+                                    {{#if dropdown}}
+                                    <select data-role="none" name="" id="{{label}}">
+                                        <option value="{{label}}">{{label}}</option>
+                                    </select>
+                                    {{else}}
+                                    <input type="text" data-role="none" id="{{label}}"></input>
+                                    {{/if}}
+                                </div>
                             </div>
-                            <div class="ui-block-b">
-                                <input type="text" data-role="none" id="{{label}}"></input>
-                            </div>
-                        </div>
+                        {{/if}}
                         {{/fields}}
                     </script>
                     <div id="feesInformation-placeholder" class="feesInformation-placeholder"></div>

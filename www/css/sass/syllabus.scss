@@ -18,11 +18,7 @@
             }
             .ui-block-b{
                 select{
-                    border: 1px solid $primaryColorGray;
-                    width: 150px;
-                    background: none;
-                    border-radius: 0px;
-                    padding: 4px;
+                    @include selectStyle;
                 }
             }
         }
