@@ -7,4 +7,24 @@
     [data-role="header"]{
         @include pageHeader;
     }
+    [data-role="content"]{
+        div.ui-grid-a{
+            margin-bottom: 20px;
+            .ui-block-a{
+                label{
+                    color: $primaryColorRed;
+                    font-weight: bold;
+                }
+            }
+            .ui-block-b{
+                select{
+                    border: 1px solid $primaryColorGray;
+                    width: 150px;
+                    background: none;
+                    border-radius: 0px;
+                    padding: 4px;
+                }
+            }
+        }
+    }
 }

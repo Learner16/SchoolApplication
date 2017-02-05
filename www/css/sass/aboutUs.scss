@@ -7,4 +7,38 @@
     [data-role="header"]{
         @include pageHeader;
     }
+    [data-role="content"]{
+        #aboutUs-placeholder{
+            div.ui-grid-b{
+                margin-bottom: 30px;
+                .ui-block-a{
+                    span{
+                        color: $primaryColorRed;
+                        font-weight: bold;
+                    }
+                }
+                .ui-block-b{
+                    div{
+                        color: $primaryColorRed;
+                    }
+                }
+                .ui-block-c{
+                    color: $primaryColorGray;
+                }
+            }
+        }
+        
+    }
+    [data-role="footer"]{
+            background: none;
+            border: none;
+            margin-bottom: 15px;
+        div.ui-grid-d{
+            text-align: center;
+            div{
+                color: $primaryColorGray;
+                
+            }
+        }
+    }
 }

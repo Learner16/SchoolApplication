@@ -449,6 +449,17 @@
     margin-left: 10px; }
   #syllabus [data-role="header"] span {
     text-align: center; }
+#syllabus [data-role="content"] div.ui-grid-a {
+  margin-bottom: 20px; }
+  #syllabus [data-role="content"] div.ui-grid-a .ui-block-a label {
+    color: #ed2553;
+    font-weight: bold; }
+  #syllabus [data-role="content"] div.ui-grid-a .ui-block-b select {
+    border: 1px solid #696969;
+    width: 150px;
+    background: none;
+    border-radius: 0px;
+    padding: 4px; }
 
 #subjectDetails [data-role="panel"] [data-role="header"] {
   background: #ed2553;
@@ -488,6 +499,20 @@
     margin-left: 10px; }
   #subjectDetails [data-role="header"] span {
     text-align: center; }
+#subjectDetails [data-role="content"] table {
+  border-collapse: collapse;
+  margin: 0px auto;
+  margin-top: 15px; }
+  #subjectDetails [data-role="content"] table thead tr td {
+    border: 1px solid #696969;
+    color: #ed2553;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold; }
+  #subjectDetails [data-role="content"] table tbody tr td {
+    border: 1px solid #696969;
+    color: #696969;
+    padding: 20px; }
 
 #viewAttendance [data-role="panel"] [data-role="header"] {
   background: #ed2553;
@@ -566,6 +591,23 @@
     margin-left: 10px; }
   #aboutUs [data-role="header"] span {
     text-align: center; }
+#aboutUs [data-role="content"] #aboutUs-placeholder div.ui-grid-b {
+  margin-bottom: 30px; }
+  #aboutUs [data-role="content"] #aboutUs-placeholder div.ui-grid-b .ui-block-a span {
+    color: #ed2553;
+    font-weight: bold; }
+  #aboutUs [data-role="content"] #aboutUs-placeholder div.ui-grid-b .ui-block-b div {
+    color: #ed2553; }
+  #aboutUs [data-role="content"] #aboutUs-placeholder div.ui-grid-b .ui-block-c {
+    color: #696969; }
+#aboutUs [data-role="footer"] {
+  background: none;
+  border: none;
+  margin-bottom: 15px; }
+  #aboutUs [data-role="footer"] div.ui-grid-d {
+    text-align: center; }
+    #aboutUs [data-role="footer"] div.ui-grid-d div {
+      color: #696969; }
 
 #feesInformation [data-role="panel"] [data-role="header"] {
   background: #ed2553;

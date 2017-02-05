@@ -7,4 +7,31 @@
     [data-role="header"]{
         @include pageHeader;
     }
+    [data-role="content"]{
+        table{
+            border-collapse: collapse;
+            margin: 0px auto;
+            margin-top: 15px;
+            thead{
+                tr{
+                    td{
+                        border: 1px solid $primaryColorGray;
+                        color: $primaryColorRed;
+                        padding: 10px;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }   
+            }
+            tbody{
+                tr{
+                    td{
+                        border: 1px solid $primaryColorGray;
+                        color: $primaryColorGray;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
